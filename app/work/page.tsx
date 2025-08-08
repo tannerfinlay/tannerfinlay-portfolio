@@ -1,6 +1,5 @@
 import { EXPERIENCE } from "app/assets/experience";
 import { PROJECTS } from "app/assets/projects";
-import { BlogPosts } from "app/components/posts";
 import WorkItem from "app/components/work-item";
 
 export const metadata = {
@@ -51,9 +50,10 @@ function Project({ name, images, description, summary, link, tags }) {
   return (
     <div>
       <h2 className="text-xl font-semibold">{name}</h2>
+      {/*       Disabled until images get fixed
       {images.map((img, index) => (
         <img
-          src={`images/${img}`}
+          src={`/images/${img}`}
           alt={`${name} number ${index}`}
           style={{
             maxWidth: "100%",
@@ -63,7 +63,8 @@ function Project({ name, images, description, summary, link, tags }) {
           }}
           key={`${name} number ${index}`}
         />
-      ))}
+      ))} */}
+
       <p className="text-neutral-600 dark:text-neutral-400 mt-2">
         {description}
       </p>
