@@ -28,4 +28,13 @@ export const PROJECTS = [
     link: "",
     tags: ["Python", "Lightkurve", "Pandas", "NumPy"],
   },
+  {
+    name: "Automated Hiring Manager",
+    images: [],
+    description:
+      "A python script using Selenium to automate web-based new hire data entry and reduce labor time by 85 percent.",
+    summary: "",
+    link: "",
+    tags: ["Python"],
+  },
 ];
