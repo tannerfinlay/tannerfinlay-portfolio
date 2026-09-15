@@ -1,5 +1,5 @@
-import { ImageResponse } from "next/og";
 export const runtime = "edge";
+import { ImageResponse } from "next/og";
 
 export function GET(request: Request) {
   let url = new URL(request.url);

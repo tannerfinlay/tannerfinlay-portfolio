@@ -9,30 +9,6 @@ const navItems = {
   },
 };
 
-const handleDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("https://tannerfinlay.dev");
-    const blob = await response.blob();
-
-    const localUrl = window.URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = localUrl;
-    link.setAttribute("download", "Finlay_Matthew_Resume.pdf");
-
-    document.body.appendChild(link);
-    link.click();
-
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(localUrl);
-  } catch (error) {
-    console.error("Could not download file", error);
-    window.open("https://tannerfinlay.dev", "_blank");
-  }
-};
-
 export function Navbar() {
   return (
     <aside className="mb-16 tracking-tight">
